@@ -22,15 +22,14 @@ export const useHomeState = () => {
 
 
   useEffect(() => {
-    const handleResize = () => setWindowWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
- 
- 
     const fetchData = () => {
       dispatch(fetchItems());
     };
     fetchData();
+
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, [dispatch]);
 
   const [currentIndex, setCurrentIndex] = useState(0);

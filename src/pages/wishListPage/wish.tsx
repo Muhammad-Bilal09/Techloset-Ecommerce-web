@@ -18,7 +18,7 @@ const Wishlist: React.FC = () => {
         <h1 className="flex justify-center text-3xl font-semibold"><u>Wishlist Items</u></h1>
       <div className="container px-5 py-24 mx-auto">
         <div className="grid lg:grid-cols-4 lg:ml-[64px] lg:mr-[61px]">
-          {wishlist.map((item: ItemType) => (
+          {wishlist?.map((item: ItemType) => (
             <div
               key={item.id}
               className="lg:w-[308px] lg:h-[313px] shadow-2xl rounded-[19.67px]  border-1 p-5 mt-3"
