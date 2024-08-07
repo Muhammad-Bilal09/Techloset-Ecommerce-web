@@ -13,7 +13,7 @@ function App() {
     <>
       <BrowserRouter>
         <Header />
-        <main>
+        <main className="min-h-screen">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/product" element={<Product />} />
