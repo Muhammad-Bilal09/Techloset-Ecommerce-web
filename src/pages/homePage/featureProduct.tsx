@@ -9,7 +9,7 @@ export default function FeatureProduct() {
     <>
       <div className="flex justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 p-4 lg:p-8 mt-8 lg:mt-12">
-        
+
           <div className="shadow-md lg:w-[603px] rounded-3xl border-4 border-gray-200 p-4 lg:p-6 flex flex-col lg:flex-row justify-between items-center">
             <div className="flex-shrink-0">
               <img className="rounded-full w-24 h-24 lg:w-60 lg:h-60" src={LoudSpeaker} alt="Loud Speaker" />

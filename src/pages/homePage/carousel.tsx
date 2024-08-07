@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function Carousel() {
 
-  
+
   const {
     state,
     currentIndex,
@@ -14,7 +14,7 @@ export default function Carousel() {
   } = useHomeState();
 
 
-  const itemsToShow = windowWidth < 670 ? 1 : 3; 
+  const itemsToShow = windowWidth < 670 ? 1 : 3;
 
   function ChevronLeftIcon(props: any) {
     return (
@@ -61,7 +61,7 @@ export default function Carousel() {
             .map((item: ItemType, index: number) => (
               <div
                 key={index}
-               className={`flex-shrink-0 ${windowWidth < 640 ? 'w-full' : 'w-[200px] md:w-[200px] lg:w-[381px]'} ${windowWidth < 640 ? 'h-[200px]' : 'h-[147px] md:h-[200px]'} p-2 border border-reviewBorder rounded-3xl bg-white shadow-md transition-transform transform hover:scale-105`}
+                className={`flex-shrink-0 ${windowWidth < 640 ? 'w-full' : 'w-[200px] md:w-[200px] lg:w-[381px]'} ${windowWidth < 640 ? 'h-[200px]' : 'h-[147px] md:h-[200px]'} p-2 border border-reviewBorder rounded-3xl bg-white shadow-md transition-transform transform hover:scale-105`}
               >
                 <Link to={`/detail/${item.id}`}>
                   <div className="flex justify-between items-center h-full">
@@ -94,7 +94,7 @@ export default function Carousel() {
             className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-primary bg-warning rounded-full shadow-lg"
             onClick={handleNextClick}
           >
-            <ChevronRightIcon className="text-primary"/>
+            <ChevronRightIcon className="text-primary" />
           </button>
         </div>
       </div>

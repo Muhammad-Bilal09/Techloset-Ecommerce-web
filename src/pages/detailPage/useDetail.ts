@@ -13,7 +13,7 @@ export const useDetail = () => {
 
   const [svgColor, setSvgColor] = useState("currentColor");
 
-  
+
   const handleButtonClick = () => {
     const newColor = svgColor === "currentColor" ? "red" : "currentColor";
     setSvgColor(newColor);
@@ -25,5 +25,5 @@ export const useDetail = () => {
     dispatch(fetchSingleItems(id));
   }, [dispatch, id]);
 
-  return { state, item, handleButtonClick,handleAddToCart, svgColor, setSvgColor, isLoading };
+  return { state, item, handleButtonClick, handleAddToCart, svgColor, setSvgColor, isLoading };
 };

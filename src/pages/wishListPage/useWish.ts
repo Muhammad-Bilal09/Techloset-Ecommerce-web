@@ -1,20 +1,20 @@
 import { useSelector, useDispatch } from "react-redux";
-import {  removeFromWishlist } from "../../redux/slice/wishlistSlice";
+import { removeFromWishlist } from "../../redux/slice/wishlistSlice";
 
 
-export const useWishlist=()=>{
+export const useWishlist = () => {
 
   const dispatch = useDispatch();
   const wishlist = useSelector((state: any) => state.wishlist.items || []);
 
   const handleRemoveFromWishlist = (itemId: number) => {
-    dispatch( removeFromWishlist(itemId));
+    dispatch(removeFromWishlist(itemId));
   };
 
-return{
+  return {
     wishlist,
     handleRemoveFromWishlist
-}
+  }
 }
 
 

@@ -12,7 +12,7 @@ const Cart: React.FC = () => {
     handleRemoveFromCart,
     handleQuantityChange,
     calculateCartTotal,
-  }=useCart();
+  } = useCart();
 
   return (
     <>
@@ -85,14 +85,14 @@ const Cart: React.FC = () => {
                     >
                       <span className="flex items-center font-heading">
                         Delete <CiCircleRemove className="ml-1 text-2xl" />
-                      </span> 
+                      </span>
                     </button>
                   </td>
                 </tr>
               ))}
-            <ToastContainer />
+              <ToastContainer />
             </tbody>
-            
+
           </table>
           <div className="flex justify-between mt-8">
             <button className="bg-yellow-400 text-white font-heading rounded-full lg:w-40 p-3">

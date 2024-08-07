@@ -9,7 +9,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ItemType } from "../../types/types";
 import { BsHeart } from "react-icons/bs";
-import {addToWishlist,removeFromWishlist,selectWishlistItems} from "../../redux/slice/wishlistSlice";
+import { addToWishlist, removeFromWishlist, selectWishlistItems } from "../../redux/slice/wishlistSlice";
 
 export default function Detail() {
   const notify = () => toast("Item added to cart");
@@ -26,7 +26,7 @@ export default function Detail() {
   const dispatch = useAppDispatch();
   const wishlistItems = useAppSelector(selectWishlistItems);
 
-  const isItemInWishlist = wishlistItems.some((wishlistItem:ItemType) => wishlistItem.id === item.id);
+  const isItemInWishlist = wishlistItems.some((wishlistItem: ItemType) => wishlistItem.id === item.id);
 
   if (isLoading) {
     return <h1 className="flex justify-center">Loading...</h1>;

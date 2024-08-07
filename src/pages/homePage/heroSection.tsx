@@ -5,10 +5,10 @@ import { useHomeState } from './useHome';
 const images = [camera1, camera2, camera3];
 
 export default function HeroSection() {
- const {
-   currentIndex,
-   handleDotClick,
- }=useHomeState();
+  const {
+    currentIndex,
+    handleDotClick,
+  } = useHomeState();
 
   return (
     <div className="w-full lg:h-[394px] grid lg:grid-cols-2 gap-4">

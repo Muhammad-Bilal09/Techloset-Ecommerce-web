@@ -25,9 +25,8 @@ export default function PopularProduct() {
               <button
                 key={category}
                 onClick={() => handleCategoryClick(category)}
-                className={`text-blue-600 hover:bg-info rounded-lg mr-3 border border-blue-600 p-2 lg:px-5 ${
-                  category === "All" ? "mr-14" : ""
-                }`}
+                className={`text-blue-600 hover:bg-info rounded-lg mr-3 border border-blue-600 p-2 lg:px-5 ${category === "All" ? "mr-14" : ""
+                  }`}
               >
                 {category}
               </button>

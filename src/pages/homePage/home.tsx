@@ -12,15 +12,15 @@ export default function Home() {
 
   return (
     <>
-      <HeroSection/>
-      <Carousel/>
+      <HeroSection />
+      <Carousel />
       <PopularProduct />
-      <Banner/>
-      <FeatureProduct/>
-      <Sponser1/>
-      <Review/>
-     <Sponser2/>
-     <Blog />
+      <Banner />
+      <FeatureProduct />
+      <Sponser1 />
+      <Review />
+      <Sponser2 />
+      <Blog />
     </>
   );
 }

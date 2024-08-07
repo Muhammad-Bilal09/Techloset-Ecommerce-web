@@ -17,7 +17,7 @@ export const useHomeState = () => {
   };
 
   useEffect(() => {
- 
+
   }, []);
 
 
@@ -33,20 +33,20 @@ export const useHomeState = () => {
   }, [dispatch]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedCategories,setSelectedCategory] = useState<string[]>([]);
+  const [selectedCategories, setSelectedCategory] = useState<string[]>([]);
 
-  const {  data, selectedCategory } = useAppSelector((state) => ({
+  const { data, selectedCategory } = useAppSelector((state) => ({
     data: state.items.data,
     isLoading: state.items.isLoading,
     selectedCategory: state.items.selectedCategory,
   }));
-  
-      const filteredCategoryData = data.filter((item: any) => {
-            if (selectedCategory && selectedCategory !== "" && item.category !== selectedCategory) {
-              return false;
-            }
-            return true;
-          });
+
+  const filteredCategoryData = data.filter((item: any) => {
+    if (selectedCategory && selectedCategory !== "" && item.category !== selectedCategory) {
+      return false;
+    }
+    return true;
+  });
 
   const filteredData = data.filter((item: any) => {
     if (
@@ -82,10 +82,10 @@ export const useHomeState = () => {
       Math.min(state.items.data.length - 3, currentIndex + 1)
     );
   };
-  const handleDotClick = (index:number) => {
+  const handleDotClick = (index: number) => {
     setCurrentIndex(index);
   };
-  const handleCategoryClick = (category:any) => {
+  const handleCategoryClick = (category: any) => {
     setSelectedCategory(category);
   };
   return {
