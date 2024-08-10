@@ -1,0 +1,30 @@
+import Header from "./components/Header/header";
+import Home from "./pages/homePage/home";
+import Footer from "./components/Footer/footer";
+import Product from "./pages/productPage/product";
+import Detail from "./pages/detailPage/detail";
+import Cart from "./pages/cartPage/Cart";
+import Wish from "./pages/wishListPage/wish";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+function App() {
+  return (
+    <>
+      <BrowserRouter>
+        <Header />
+        <main className="min-h-screen">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/product" element={<Product />} />
+            <Route path="/detail/:id" element={<Detail />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/wishlist" element={<Wish />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;
