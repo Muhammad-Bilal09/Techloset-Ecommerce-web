@@ -65,7 +65,6 @@ export const useHomeState = () => {
     dispatch(addToCart(item));
   };
 
-  useEffect(() => {}, []);
 
   useEffect(() => {
     const fetchData = () => {

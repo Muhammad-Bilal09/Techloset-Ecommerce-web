@@ -1,10 +1,17 @@
 import { CiStar } from "react-icons/ci";
-import loudSpeaker from "../../assets/images/speaker.png";
-import playGame from "../../assets/images/playGame.png";
-import laptop from "../../assets/images/miniLaptop.png";
+import loudSpeaker from "../assets/images/speaker.png";
+import playGame from "../assets/images/playGame.png";
+import laptop from "../assets/images/miniLaptop.png";
 import { IoCartOutline, IoEyeSharp } from "react-icons/io5";
 
 export default function FeatureProduct() {
+
+  const STARS = 5;
+
+  const stars = [...Array(STARS)].map((_, index) => (
+    <CiStar key={index} className="text-yellow-500" />
+  ));
+  
   return (
     <>
       <div className="flex justify-center">
@@ -71,9 +78,7 @@ export default function FeatureProduct() {
                   </p>
                   <p className="font-bold text-lg lg:text-xl">$11.70</p>
                   <div className="flex mt-2 space-x-1">
-                    {[...Array(5)].map((_, index) => (
-                      <CiStar key={index} className="text-yellow-500" />
-                    ))}
+                  {stars}
                   </div>
                 </div>
               </div>

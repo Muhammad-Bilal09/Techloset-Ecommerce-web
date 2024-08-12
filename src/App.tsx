@@ -5,6 +5,7 @@ import Product from "./pages/productPage/product";
 import Detail from "./pages/detailPage/detail";
 import Cart from "./pages/cartPage/Cart";
 import Wish from "./pages/wishListPage/wish";
+import NotFound from "./pages/notFoundPage/NotFound";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/detail/:id" element={<Detail />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/wishlist" element={<Wish />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />

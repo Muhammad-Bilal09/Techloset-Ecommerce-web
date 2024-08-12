@@ -1,8 +1,8 @@
-import { useHomeState } from "../../pages/homePage/useHome";
+import { useHomeState } from "../pages/homePage/useHome";
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import { ItemType } from "../../types/types";
+import { ItemType } from "../types/types";
 import { IoCartOutline, IoEyeSharp } from "react-icons/io5";
 import { toast, ToastContainer } from "react-toastify";
 

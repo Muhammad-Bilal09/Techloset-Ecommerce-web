@@ -11,41 +11,43 @@ import { useAppSelector } from "../../redux/hooks/hooks";
 import { selectTotalItems } from "../../redux/slice/cartSlice";
 import { selectWishlistItems } from "../../redux/slice/wishlistSlice";
 import { LuHeart } from "react-icons/lu";
+
 export default function Header() {
+  
   const wishlistItems = useSelector(selectWishlistItems);
   const totalWishlistItems = wishlistItems.length;
   const totalItems = useAppSelector(selectTotalItems);
 
-  const { handleCategoryChange, categories } = useHandleCategoryChange();
+  const { handleCategoryChange } = useHandleCategoryChange();
   useFetchItemsEffect();
 
   return (
     <>
-      <nav className=" ml-4 lg:ml-[61px] lg:mr-[49px] mt-5 mb-7">
-        <div className="max-w-7xl mx-auto lg:flex justify-between items-center ">
+      <nav className="ml-4 lg:ml-[61px] lg:mr-[49px] mt-5 mb-7">
+        <div className="max-w-7xl mx-auto lg:flex justify-between items-center">
           <div className="flex items-center">
-            <a href="#" className="text-black text-lg font-heading">
+            <Link to="#" className="text-black text-lg font-heading">
               Need help? Call us (+98) 0234 456 789
-            </a>
+            </Link>
           </div>
           <div>
             <ul className="flex space-x-9 ml-10">
               <li className="mx-2 mt-2 font-heading">
                 <Link
                   to="/product"
-                  className="flex items-center justify-center text-black-900   hover:text-green-900"
+                  className="flex items-center justify-center text-black-900 hover:text-green-900"
                 >
                   <CiLocationOn style={{ fontSize: "24px" }} /> Our Store
                 </Link>
               </li>
               <li className="mx-2 mt-2 font-heading">
-                <a
+                <Link
+                  to="/about"
                   className="flex items-center lg:mr-20 text-black-900 hover:text-green-900"
-                  href="/about"
                 >
                   <CiDeliveryTruck style={{ fontSize: "24px" }} /> Track Your
                   Order
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -57,9 +59,9 @@ export default function Header() {
           <div>
             <Link
               to="/"
-              className="text-white text-lg mt-4  font-semibold flex items-center"
+              className="text-white text-lg mt-4 font-semibold flex items-center"
             >
-              <img src={logo} alt="" className="h-8 md:h-10" />
+              <img src={logo} alt="Logo" className="h-8 md:h-10" />
             </Link>
           </div>
           <div className="hidden lg:flex relative mt-5">
@@ -77,19 +79,19 @@ export default function Header() {
           </div>
           <div className="md:flex items-center">
             <ul className="flex space-x-4 mt-4">
-              <li className="hidden md:flex mx-2 ">
-                <a
+              <li className="hidden md:flex mx-2">
+                <Link
+                  to="/signup"
                   className="flex items-center text-white font-heading hover:text-gray-300"
-                  href="/"
                 >
-                  <img src={User} alt="" />
+                  <img src={User} alt="User" />
                   Signup
-                </a>
+                </Link>
               </li>
               <li className="mx-2 font-heading">
                 <Link
-                  className="flex items-center text-white hover:text-gray-300"
                   to="/wishlist"
+                  className="flex items-center text-white hover:text-gray-300"
                 >
                   <LuHeart className="text-2xl" />
                   {totalWishlistItems > 0 ? (
@@ -137,47 +139,52 @@ export default function Header() {
               }
             >
               categories
-              <img className="ml-1" src={arrow} alt="" />
+              <img className="ml-1" src={arrow} alt="Arrow" />
             </button>
           </div>
           <div className="flex space-x-7">
             <div className="hidden md:flex">
-              <Link
-                to="/"
-                className="flex text-black font-medium
-               font-heading "
-              >
+              <Link to="/" className="flex text-black font-medium font-heading">
                 Home
-                <img className="ml-1" src={arrow} alt="" />
+                <img className="ml-1" src={arrow} alt="Arrow" />
               </Link>
             </div>
             <div className="hidden sm:flex md:flex">
-              <a href="" className="flex text-black font-heading font-medium ">
+              <Link
+                to="/catalog"
+                className="flex text-black font-heading font-medium"
+              >
                 Catalog
-                <img className="ml-1" src={arrow} alt="" />
-              </a>
+                <img className="ml-1" src={arrow} alt="Arrow" />
+              </Link>
             </div>
             <div className="hidden sm:flex md:flex">
-              <a href="" className="flex text-black font-heading font-medium">
+              <Link
+                to="/blogs"
+                className="flex text-black font-heading font-medium"
+              >
                 Blogs
-              </a>
+              </Link>
             </div>
             <div className="hidden md:flex">
               <Link
                 to="/product"
                 className="flex text-black font-heading font-medium"
               >
-                product
-                <img className="ml-1" src={arrow} alt="" />
+                Product
+                <img className="ml-1" src={arrow} alt="Arrow" />
               </Link>
             </div>
             <div className="hidden md:flex">
-              <a href="" className="flex text-black font-heading font-medium">
+              <Link
+                to="/about"
+                className="flex text-black font-heading font-medium"
+              >
                 About us
-              </a>
+              </Link>
             </div>
           </div>
-          <span className="font-bold ml-4  font-heading md:hidden flex lg:flex">
+          <span className="font-bold ml-4 font-heading md:hidden flex lg:flex">
             30 Days Free Return
           </span>
         </div>

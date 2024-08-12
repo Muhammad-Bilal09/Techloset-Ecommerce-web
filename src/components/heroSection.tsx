@@ -1,7 +1,7 @@
-import cameraOne from "../../assets/images/cameraOne.png";
-import cameraTwo from "../../assets/images/cameraTwo.jpg";
-import cameraThree from "../../assets/images/cameraOne.png";
-import { useHomeState } from "../../pages/homePage/useHome";
+import cameraOne from "../assets/images/cameraOne.png";
+import cameraTwo from "../assets/images/cameraTwo.jpg";
+import cameraThree from "../assets/images/cameraOne.png";
+import { useHomeState } from "../pages/homePage/useHome";
 const images = [cameraOne, cameraTwo, cameraThree];
 
 export default function HeroSection() {

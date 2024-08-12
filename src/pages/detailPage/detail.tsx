@@ -16,7 +16,10 @@ import {
 } from "../../redux/slice/wishlistSlice";
 
 export default function Detail() {
+  
   const notify = () => toast("Item added to cart");
+
+ const  starCount=5
 
   const {
     item,
@@ -54,16 +57,19 @@ export default function Detail() {
             <span className="title-font font-bold mt-2 text-2xl text-gray-900">
               ${item.price}
             </span>
+        
             <div className="flex mb-4">
-              <span className="flex items-center mt-2">
-                <img src={Stars} alt="" />
-                <img src={Stars} alt="" />
-                <img src={Stars} alt="" />
-                <img src={Stars} alt="" />
-                <img src={Stars} alt="" />
-                <span className="text-gray-600 ml-3 mt-3">no Reviews</span>
-              </span>
-            </div>
+      <span className="flex items-center mt-2">
+        {Array?.from({ length: starCount }, (_, index) => (
+          <img
+            key={index}
+            src={Stars}
+            alt="Star"
+          />
+        ))}
+        <span className="text-gray-600 ml-3 mt-3">no Reviews</span>
+      </span>
+    </div>
             <span className="flex">
               <h2 className="font-bold text-lg">Availability:</h2>
               <img className="ml-3" src={Vector} alt="" />

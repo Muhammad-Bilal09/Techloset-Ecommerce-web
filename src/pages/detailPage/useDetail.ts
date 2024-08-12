@@ -7,7 +7,7 @@ import { addToCart } from "../../redux/slice/cartSlice";
 import { CartItem } from "../../types/types";
 export const useDetail = () => {
   const dispatch = useAppDispatch();
-  const state: any = useAppSelector((state) => state);
+  const state = useAppSelector((state:any) => state);
   const { id } = useParams<{ id: any }>();
   const { item, isLoading } = useAppSelector((state) => state.products);
 

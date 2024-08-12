@@ -1,6 +1,6 @@
-import FrameOne from "../../assets/images/frameFiftyFive.png";
-import FrameTwo from "../../assets/images/frameFiftySix.png";
-import FrameThree from "../../assets/images/frameFiftySeven.png";
+import FrameOne from "../assets/images/frameFiftyFive.png";
+import FrameTwo from "../assets/images/frameFiftySix.png";
+import FrameThree from "../assets/images/frameFiftySeven.png";
 
 export default function SponserOne() {
   return (
