@@ -1,7 +1,7 @@
 import { CiStar } from "react-icons/ci";
-import loudSpeaker from "../assets/images/speaker.png";
-import playGame from "../assets/images/playGame.png";
-import laptop from "../assets/images/miniLaptop.png";
+import loudSpeaker from "../../assets/images/speaker.png";
+import playGame from "../../assets/images/playGame.png";
+import laptop from "../../assets/images/miniLaptop.png";
 import { IoCartOutline, IoEyeSharp } from "react-icons/io5";
 
 export default function FeatureProduct() {

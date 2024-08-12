@@ -1,4 +1,4 @@
-import LaptopBanner from "../assets/images/banner.png";
+import LaptopBanner from "../../assets/images/banner.png";
 
 export default function banner() {
   return (

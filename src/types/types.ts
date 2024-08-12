@@ -12,6 +12,16 @@ export type RootState = {
   };
 };
 
+export type FooterLinkSectionProps = {
+  title: string;
+  items: string[];
+};
+
+export type FooterLink = {
+  title: string;
+  items: string[];
+};
+
 export type UpdateQuantityPayload = {
   id: number;
   quantity: number;

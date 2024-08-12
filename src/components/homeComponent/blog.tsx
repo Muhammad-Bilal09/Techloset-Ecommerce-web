@@ -1,5 +1,5 @@
-import bagOne from "../assets/images/blogOne.png";
-import bagTwo from "../assets/images/blogTwo.png";
+import bagOne from "../../assets/images/blogOne.png";
+import bagTwo from "../../assets/images/blogTwo.png";
 
 export default function Blog() {
   return (

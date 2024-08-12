@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useProduct from "./useProduct";
-import Banner from "../../components/banner";
+import Banner from "../../components/homeComponent/banner";
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";
 import { IoCartOutline, IoEyeSharp } from "react-icons/io5";

@@ -1,6 +1,6 @@
 import { useAppDispatch, useAppSelector } from "../../redux/hooks/hooks";
-import { useDetail } from "./useDetail";
-import Vector from "../../assets/images/Vector.png";
+import { useDetail } from "../../pages/detailPage/useDetail";
+import Vector from "../../assets/images/good.png";
 import Stars from "../../assets/images/star.png";
 import { FaStar } from "react-icons/fa";
 import { CiStar } from "react-icons/ci";

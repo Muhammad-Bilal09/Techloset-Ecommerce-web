@@ -5,6 +5,8 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useCart } from "./useCart";
 import { Link } from "react-router-dom";
+import { tableHeaders } from "../../constants/cart";
+
 const Cart: React.FC = () => {
   const {
     cartItems,
@@ -23,25 +25,18 @@ const Cart: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8 lg:ml-40">
         <div className="overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
-            <thead>
-              <tr className="bg-blue-300">
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 font-heading">
-                  Product
-                </th>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 font-heading">
-                  Name
-                </th>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 font-heading">
-                  Price
-                </th>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 font-heading">
-                  Quantity
-                </th>
-                <th className="px-4 py-2 text-left text-sm font-medium text-gray-700 font-heading">
-                  Action
-                </th>
-              </tr>
-            </thead>
+          <thead>
+        <tr className="bg-blue-300">
+          {tableHeaders.map((header) => (
+            <th
+              key={header.key}
+              className="px-4 py-2 text-left text-sm font-medium text-gray-700 font-heading"
+            >
+              {header.label}
+            </th>
+          ))}
+        </tr>
+      </thead>
             <tbody className="divide-y divide-gray-200">
               {cartItems.map((item) => (
                 <tr key={item.id}>
