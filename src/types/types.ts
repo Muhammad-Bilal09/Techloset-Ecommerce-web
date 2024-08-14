@@ -17,6 +17,11 @@ export type FooterLinkSectionProps = {
   items: string[];
 };
 
+export interface ErrorResponse {
+  message: string;
+}
+
+
 export type FooterLink = {
   title: string;
   items: string[];
@@ -42,8 +47,16 @@ export type CartState = {
   selectedProduct: any;
 };
 
+export type Product = {
+  id: number;
+  name: string;
+  description: string;
+  price: number;
+
+};
+
 export type ProductState = {
-  item: any;
+  item:  Product | any;
   isLoading: boolean;
   error: string | null;
 };
