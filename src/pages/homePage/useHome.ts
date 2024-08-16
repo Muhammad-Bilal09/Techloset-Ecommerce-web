@@ -81,7 +81,7 @@ export const useHomeState = () => {
   const [selectedCategories, setSelectedCategory] = useState<string[]>([]);
 
   const { data, selectedCategory } = useAppSelector((state) => ({
-    data: state.items.data,
+    data: state.items.data || [],
     isLoading: state.items.isLoading,
     selectedCategory: state.items.selectedCategory,
   }));
@@ -113,8 +113,12 @@ export const useHomeState = () => {
     }
     return true;
   });
+  const handleCategoryClick = (category: any) => {
+    setSelectedCategory(category);
+  };
+
   const getFilteredData = () => {
-    const { data } = state;
+    const { data  } = state;
     if (selectedCategory === "All") {
       return data;
     }
@@ -132,9 +136,6 @@ export const useHomeState = () => {
   };
   const handleDotClick = (index: number) => {
     setCurrentIndex(index);
-  };
-  const handleCategoryClick = (category: any) => {
-    setSelectedCategory(category);
   };
   return {
     handleCategoryClick,

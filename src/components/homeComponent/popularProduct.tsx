@@ -14,12 +14,18 @@ export default function PopularProduct() {
     itemHeartColors,
     handleCategoryClick,
     handleAddToCart,
+    setSelectedCategory,
     categories,
   } = useHomeState();
 
   const notify = () => {
-    toast("item added into cart");
+    toast("Item added to cart");
   };
+
+  const handleShowAll = () => {
+    setSelectedCategory(categories) 
+  };
+
   return (
     <>
       <div>
@@ -30,6 +36,12 @@ export default function PopularProduct() {
             </u>
           </div>
           <div className="hidden md:block">
+            <button
+              onClick={handleShowAll}
+              className="text-blue-600 hover:bg-info rounded-lg mr-3 border border-blue-600 p-2 lg:px-5"
+            >
+              All
+            </button>
             {categories.map((category) => (
               <button
                 key={category}
@@ -44,7 +56,7 @@ export default function PopularProduct() {
           </div>
         </div>
 
-        <div className="grid  lg:grid-cols-4 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 gap-6 place-self-center">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 gap-6 place-self-center">
           {filteredData?.map((item: ItemType) => (
             <div
               key={item.id}
