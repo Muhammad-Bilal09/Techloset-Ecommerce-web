@@ -2,7 +2,7 @@ import { sponsorsOne } from "../../constants/sponser";
 
 export default function SponserOne() {
   return (
-    <div className="mt-[75px] h-40 lg:mx-12 rounded-xl flex flex-wrap justify-center items-center bg-darkblue p-4">
+    <div className="mt-[75px] h-40 lg:ml-[51px] lg:mr-[61px] rounded-xl flex flex-wrap justify-center items-center bg-darkblue p-4">
       {sponsorsOne.map((sponsor, index) => (
         <img
           key={index}

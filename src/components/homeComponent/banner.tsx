@@ -7,7 +7,7 @@ export default function banner() {
         <div className="relative">
           <img src={LaptopBanner} alt="" />
         </div>
-        <div className="absolute lg:left-[770px]   lg:mt-24">
+        <div className="absolute lg:left-[770px] lg:mt-24">
           <button className="w-32  lg:h-11 bg-orange text-white font-heading rounded-full">
             New Laptop
           </button>

@@ -3,7 +3,7 @@ import reviews from "../../constants/reviews";
 
 export default function Review() {
   return (
-    <div className="py-10 lg:py-16 bg-gray-50">
+    <div className="mx-8 mt-7 lg:ml-[61px] lg:mr-[60px] lg:mt-[75px] bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((review) => (

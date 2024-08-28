@@ -8,7 +8,6 @@ import { toast, ToastContainer } from "react-toastify";
 
 export default function PopularProduct() {
   const {
-    item,
     filteredData,
     handleButtonClick,
     itemHeartColors,
