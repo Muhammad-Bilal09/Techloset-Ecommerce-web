@@ -19,7 +19,6 @@ const Cart: React.FC = () => {
   return (
     <>
       <div className="flex flex-col lg:flex-row gap-8 mt-8 lg:mx-16">
-        {/* Cart Items Table */}
         <div className="flex-1 overflow-x-auto">
           <table className="min-w-full divide-y divide-gray-200">
             <thead>
@@ -81,8 +80,6 @@ const Cart: React.FC = () => {
               <ToastContainer />
             </tbody>
           </table>
-
-          {/* Action Buttons */}
           <div className="flex flex-col md:flex-row justify-between mt-8">
             <Link to="/">
               <button className="bg-yellow-400 text-white font-heading rounded-full w-full md:w-auto lg:w-[295px] h-[50px] p-3">
