@@ -7,13 +7,15 @@ export const footerLinks: FooterLink[] = [
         'Brownze Arnold',
         'Chronograph Blue',
         'Smart Phone',
-        'Hair Straightener'
+        'Hair Straightener',
+        'Customer Care',
       ]
     },
     {
       title: 'Get Help',
       items: [
         'Contact Us',
+        'News',
         'Privacy Policy',
         'Return Policy',
         'Payment Policy'
@@ -25,16 +27,8 @@ export const footerLinks: FooterLink[] = [
         'News',
         'Services',
         'Our Policy',
-        'FAQs'
+        'FAQs',
+        'Automatic Watch',
       ]
     },
-    {
-      title: 'Categories',
-      items: [
-        'Customer Care',
-        'News',
-        'Automatic Watch',
-        'About Us'
-      ]
-    }
   ];

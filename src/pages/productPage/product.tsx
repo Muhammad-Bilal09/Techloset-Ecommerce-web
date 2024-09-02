@@ -21,8 +21,9 @@ const Product: React.FC = () => {
   } = useProduct();
 
   const notify = () => {
-    toast("item added into cart");
+    toast("Item added to cart");
   };
+
   if (isLoading) {
     return (
       <h1 className="flex justify-center text-lg font-bold">Loading...</h1>
@@ -31,8 +32,8 @@ const Product: React.FC = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row lg:flex-row  gap-8">
+      <div className="container mx-auto lg:ml-[61px] lg:mr-[64px]">
+        <div className="flex flex-col md:flex-row lg:flex-row gap-5 lg:mt-[103px]">
           <aside className="w-full lg:w-1/4 bg-gray-100 p-4 rounded-lg shadow-md">
             <div className="mb-6">
               <div className="flex justify-between items-center">
@@ -58,11 +59,11 @@ const Product: React.FC = () => {
             </div>
             <hr className="my-6" />
             <div className="mb-6">
-              <h2 className="text-blue-400 font-medium text-lg font-heading mb-2">
-                Availability
-              </h2>
-              <div className="flex items-center justify-between py-2">
-                <span className="text-gray-700 font-heading">In stock</span>
+               <h2 className="text-blue-400 font-medium text-lg font-heading mb-2">
+                 Availability
+               </h2>
+               <div className="flex items-center justify-between py-2">
+                 <span className="text-gray-700 font-heading">In stock</span>
                 <input
                   type="checkbox"
                   className="form-checkbox h-5 w-5 text-green-500"
@@ -142,11 +143,11 @@ const Product: React.FC = () => {
           </aside>
 
           <main className="w-full lg:w-3/4">
-            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[26px]">
               {filteredData?.slice(0, 12).map((item: ItemType) => (
                 <div
                   key={item.id}
-                  className="relative overflow-hidden shadow-md rounded-lg border-2 bg-white flex flex-col items-center p-4 group"
+                  className="relative overflow-hidden shadow-md rounded-2xl border-2 bg-white flex flex-col p-4 group"
                 >
                   <div className="flex justify-center mb-4">
                     <img
@@ -173,17 +174,19 @@ const Product: React.FC = () => {
                     </button>
                   </div>
                   <div className="transition-transform transform group-hover:scale-105 group-hover:opacity-0 duration-300">
-                    <p className="text-blue-300 font-bold mt-4">
+                    <p className="text-blog font-bold mt-4">
                       {item.title.slice(0, 20)}
                     </p>
-                    <p className="font-bold">${item.price}</p>
-                    <div className="flex justify-center mt-2">
+                    <p className="font-bold text-product lg:my-[15px]">
+                      ${item.price}
+                    </p>
+                    <div className="flex mt-2">
                       {[...Array(5)].map((_, index) => (
                         <i key={index}>
                           {index < item.rating ? (
-                            <FaStar className="text-yellow-400" />
+                            <FaStar className="text-star" />
                           ) : (
-                            <CiStar className="text-gray-400" />
+                            <CiStar className="text-star" />
                           )}
                         </i>
                       ))}

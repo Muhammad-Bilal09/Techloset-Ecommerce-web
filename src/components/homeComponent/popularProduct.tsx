@@ -28,16 +28,16 @@ export default function PopularProduct() {
   return (
     <>
       <div>
-        <div className="flex justify-between m-10">
-          <div className="ml-5">
-            <u className="text-blue-600 font-extrabold ml-10 font-heading">
+        <div className="flex justify-between mx-[61px] gap-[30px]">
+          <div className="">
+            <span className="text-blog lg:w-[241px] lg:h-[45px] font-extrabold font-heading">
               Popular Product
-            </u>
+            </span>
           </div>
           <div className="hidden md:block">
             <button
               onClick={handleShowAll}
-              className="text-blue-600 hover:bg-info rounded-lg mr-3 border border-blue-600 p-2 lg:px-5"
+              className="text-blog rounded-lg mr-3 border border-blog p-2 lg:px-5"
             >
               All
             </button>
@@ -45,7 +45,7 @@ export default function PopularProduct() {
               <button
                 key={category}
                 onClick={() => handleCategoryClick(category)}
-                className={`text-blue-600 hover:bg-info rounded-lg mr-3 border border-blue-600 p-2 lg:px-5 ${
+                className={`text-blog rounded-lg mr-3 border border-blog p-2 lg:px-5 ${
                   category === "All" ? "mr-14" : ""
                 }`}
               >
@@ -55,11 +55,11 @@ export default function PopularProduct() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 gap-6 place-self-center">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 gap-6 mt-8 place-self-center">
           {filteredData?.map((item: ItemType) => (
             <div
               key={item.id}
-              className="relative lg:w-[308px] lg:h-[313px] shadow-md mt-5 rounded-[19.67px] border-5 p-5 overflow-hidden group"
+              className="relative lg:w-[308px] mx-8 lg:h-[313px] shadow-md rounded-[19.67px] border-5 p-5 overflow-hidden group"
             >
               <div className="relative flex justify-center items-center mb-4">
                 <img
@@ -87,17 +87,17 @@ export default function PopularProduct() {
                 </button>
               </div>
               <div className="transition-transform transform group-hover:scale-105 group-hover:opacity-0 duration-300">
-                <p className="text-blue-300 font-bold mt-4">
+                <p className="text-blog font-bold mt-4">
                   {item.title.slice(0, 20)}
                 </p>
-                <p className="font-bold">${item.price}</p>
-                <div className="flex justify-center mt-2">
+                <p className="font-bold text-star my-4">${item.price}</p>
+                <div className="flex mt-2">
                   {[...Array(5)].map((_, index) => (
                     <i key={index}>
                       {index < item.rating ? (
-                        <FaStar className="text-yellow-400" />
+                        <FaStar className="text-star" />
                       ) : (
-                        <CiStar className="text-gray-400" />
+                        <CiStar className="text-star" />
                       )}
                     </i>
                   ))}
@@ -111,13 +111,13 @@ export default function PopularProduct() {
                       handleAddToCart(item);
                       notify();
                     }}
-                    className="flex items-center rounded-2xl w-full lg:w-44 font-heading h-12 bg-blue-200 font-bold p-2 lg:p-4"
+                    className="flex items-center rounded-2xl w-full lg:w-44 font-heading h-12 bg-cart font-bold p-2 lg:p-4"
                   >
                     Add to Cart
                     <IoCartOutline className="text-xl bg-yellow-400 ml-2 rounded" />
                   </button>
                   <Link to={`/detail/${item.id}`}>
-                    <button className="flex items-center justify-center bg-blue-200 rounded-2xl w-12 h-12 lg:w-16 lg:h-12 font-extrabold">
+                    <button className="flex items-center justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 font-extrabold">
                       <IoEyeSharp className="text-2xl lg:text-3xl" />
                     </button>
                   </Link>
