@@ -1,6 +1,6 @@
 import Header from "./components/headerPage/header";
 import Home from "./pages/homePage/home";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/Footer/Footer";
 import Product from "./pages/productPage/product";
 import Detail from "./components/homeComponent/detail";
 import Cart from "./pages/cartPage/Cart";
