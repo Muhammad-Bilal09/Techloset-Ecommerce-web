@@ -11,7 +11,6 @@ import { useFetchItemsEffect, useHandleCategoryChange } from "./useHeader";
 import { useAppSelector } from "../../redux/hooks/hooks";
 import { selectTotalItems } from "../../redux/slice/cartSlice";
 import { selectWishlistItems } from "../../redux/slice/wishlistSlice";
-import { LuHeart } from "react-icons/lu";
 
 export default function Header() {
   
