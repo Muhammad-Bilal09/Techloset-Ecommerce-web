@@ -9,7 +9,6 @@ import { IoCartOutline, IoEyeSharp } from "react-icons/io5";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ItemType } from "../../types/types";
-import { BsHeart } from "react-icons/bs";
 import {
   addToWishlist,
   removeFromWishlist,
