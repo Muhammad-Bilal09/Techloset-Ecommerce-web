@@ -28,7 +28,7 @@ export default function PopularProduct() {
   return (
     <>
       <div>
-        <div className="flex justify-between mx-[61px] gap-[30px]">
+        <div className="flex justify-between ml-[61px] mr-[61px] gap-[30px]">
           <div className="">
             <span className="text-blog lg:w-[241px] lg:h-[45px] font-extrabold font-heading">
               Popular Product
@@ -37,7 +37,7 @@ export default function PopularProduct() {
           <div className="hidden md:block">
             <button
               onClick={handleShowAll}
-              className="text-blog rounded-lg mr-3 border border-blog p-2 lg:px-5"
+              className="text-blog rounded-[20px] mr-3 border border-blog p-2 lg:px-5"
             >
               All
             </button>
@@ -45,7 +45,7 @@ export default function PopularProduct() {
               <button
                 key={category}
                 onClick={() => handleCategoryClick(category)}
-                className={`text-blog rounded-lg mr-3 border border-blog p-2 lg:px-5 ${
+                className={`text-blog rounded-[20px] mr-3 border border-blog p-2 lg:px-5 ${
                   category === "All" ? "mr-14" : ""
                 }`}
               >
@@ -55,7 +55,7 @@ export default function PopularProduct() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 gap-6 mt-8 place-self-center">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 mt-8 place-self-center">
           {filteredData?.map((item: ItemType) => (
             <div
               key={item.id}

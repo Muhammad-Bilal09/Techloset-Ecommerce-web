@@ -1,8 +1,8 @@
 import { useHomeState } from "../../pages/homePage/useHome";
 import { ItemType } from "../../types/types";
 import { Link } from "react-router-dom";
-import ChevronLeftIcon from '../../assets/images/chevronLeft.svg'; 
-import ChevronRightIcon from '../../assets/images/chevronRight.svg'; 
+import  leftArrow from "../../assets/images/arrowleft.png"
+import rightArrow from '../../assets/images/arrowRight.png'; 
 
 
 
@@ -44,18 +44,18 @@ export default function Carousel() {
               </div>
             ))}
         </div>
-        <div className="flex absolute w-full top-1/2 sm:transform -translate-y-5 lg:transform lg:-translate-y-10 justify-between px-4">
+        <div className="flex absolute w-full top-1/2 sm:transform -translate-y-5 lg:transform lg:-translate-y-10 justify-between">
           <button
-            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-primary bg-warning rounded-full shadow-lg"
+            className=" flex items-center justify-center rounded-full shadow-lg"
             onClick={handlePrevClick}
           >
-            <img src={ChevronLeftIcon} alt="Previous" className=" text-primary" />
+            <img src={leftArrow} alt="Previous" className=" text-primary" />
           </button>
           <button
-            className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-primary bg-warning rounded-full shadow-lg"
+            className=" flex items-center justify-center text-primary rounded-full shadow-lg"
             onClick={handleNextClick}
           >
-            <img src={ChevronRightIcon} alt="Next" className=" text-primary" />
+            <img src={rightArrow} alt="Next" className=" text-primary" />
           </button>
         </div>
       </div>

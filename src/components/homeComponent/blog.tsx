@@ -4,8 +4,8 @@ import bagTwo from "../../assets/images/blogTwo.png";
 export default function Blog() {
   return (
     <>
-      <div className="mx-4 lg:mx-14 my-8 grid grid-cols-1 lg:grid-cols-2 gap-5">
-        <div className="flex flex-col lg:flex-row lg:w-[650px] lg:h-[369px]  bg-white shadow-md rounded-lg gap-7 border p-4 lg:p-6">
+      <div className="mx-4 lg:ml-14 lg:mr-14 my-8 grid grid-cols-1 lg:grid-cols-2">
+        <div className="flex flex-col lg:flex-row lg:w-[630px] lg:h-[369px]  bg-white shadow-md rounded-lg border p-4 lg:p-6">
           <div className="flex-shrink-0">
             <img
               className="w-full lg:w-70 h-auto lg:h-72 object-cover rounded-lg"
@@ -28,7 +28,7 @@ export default function Blog() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:w-[650px] lg:h-[369px] lg:flex-row bg-white shadow-md rounded-lg border p-4 lg:p-6">
+        <div className="flex flex-col lg:w-[630px] lg:h-[369px] lg:flex-row bg-white shadow-md rounded-lg border p-4 lg:p-6">
           <div className="flex-shrink-0">
             <img
               className="w-full lg:w-70 h-auto lg:h-72 object-cover rounded-lg"
