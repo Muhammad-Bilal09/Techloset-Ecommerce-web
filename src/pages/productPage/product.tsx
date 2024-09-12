@@ -151,7 +151,7 @@ const Product: React.FC = () => {
                 >
                   <div className="flex justify-center mb-4">
                     <img
-                      className="w-full h-48 object-cover"
+                      className="w-[187px] h-[173px]"
                       src={item.image}
                       alt={item.title}
                     />

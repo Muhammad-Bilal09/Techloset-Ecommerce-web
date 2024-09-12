@@ -28,7 +28,7 @@ export default function PopularProduct() {
   return (
     <>
       <div>
-        <div className="flex justify-between ml-[61px] mr-[61px] gap-[30px]">
+        <div className="flex justify-between ml-[61px] mr-[61px]">
           <div className="">
             <span className="text-blog lg:w-[241px] lg:h-[45px] font-extrabold font-heading">
               Popular Product
@@ -55,11 +55,11 @@ export default function PopularProduct() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 mt-8 place-self-center">
+        <div className="grid lg:grid-cols-4 gap-2 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 mt-8 place-self-center">
           {filteredData?.map((item: ItemType) => (
             <div
               key={item.id}
-              className="relative lg:w-[308px] mx-8 lg:h-[313px] shadow-md rounded-[19.67px] border-5 p-5 overflow-hidden group"
+              className="relative lg:w-[308px] mb-4 lg:h-[313px] shadow-md rounded-[19.67px] border-5 overflow-hidden group"
             >
               <div className="relative flex justify-center items-center mb-4">
                 <img
@@ -86,7 +86,7 @@ export default function PopularProduct() {
                   </svg>
                 </button>
               </div>
-              <div className="transition-transform transform group-hover:scale-105 group-hover:opacity-0 duration-300">
+              <div className="transition-transform ml-3 transform group-hover:scale-105 group-hover:opacity-0 duration-300">
                 <p className="text-blog font-bold mt-4">
                   {item.title.slice(0, 20)}
                 </p>

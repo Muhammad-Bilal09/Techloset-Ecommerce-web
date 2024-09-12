@@ -11,10 +11,10 @@ export default function Carousel() {
   const { state, currentIndex, handlePrevClick, handleNextClick, windowWidth } =
     useHomeState();
 
-  const itemsToShow = windowWidth < 670 ? 1 : 3;
+    const itemsToShow = windowWidth < 670 ? 1 : windowWidth < 1024 ? 2 : 3;
 
   return (
-    <div className="flex justify-center lg:w-[1100px] mx-auto ">
+    <div className="flex justify-center mx-auto ">
       <div className="relative lg:mx-[109px] ">
         <div className="flex overflow-x-auto p-4 lg:mt-[55.5px] lg:mb-[101px]" style={{ gap: '43.35px' }}>
           {state?.items.data
@@ -22,7 +22,7 @@ export default function Carousel() {
             .map((item: ItemType, index: number) => (
               <div
                 key={index}
-                className={`flex-shrink-0 w-[308px] lg:w-[381.63px] h-[147px] p-2 border border-reviewBorder rounded-[20px] bg-white shadow-md transition-transform transform hover:scale-105`}
+                className={`flex-shrink-0 w-[308px] md:w-[320px] lg:w-[381.63px] h-[147px] border border-reviewBorder rounded-[20px] bg-white shadow-md transition-transform transform hover:scale-105`}
               >
                 <Link to={`/detail/${item.id}`}>
                   <div className="flex justify-between items-center h-full">

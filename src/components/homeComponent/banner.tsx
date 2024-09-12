@@ -3,7 +3,7 @@ import LaptopBanner from "../../assets/images/banner.png";
 export default function banner() {
   return (
     <>
-      <div className="flex justify-center items-center lg:w-[1340px} lg:h-[417px] lg:ml-[64px] lg:mr-[61px] mt-[51px] mx-10">
+      <div className="flex justify-center items-center lg:w-[1340px} lg:h-[417px] lg:ml-[64px] lg:mr-[61px] mt-[51px]">
         <div className="relative">
           <img src={LaptopBanner} alt="" />
         </div>

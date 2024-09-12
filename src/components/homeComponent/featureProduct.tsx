@@ -45,12 +45,12 @@ export default function FeatureProduct() {
                 </button>
               ))}
             </div>
-            <div className="flex flex-col lg:flex-row justify-center lg:justify-start mt-6 space-y-2 lg:space-y-0 lg:space-x-4">
-              <button className="flex items-center rounded-2xl w-full lg:w-52 font-heading h-12 bg-cart text-white font-bold p-2 lg:p-4">
+            <div className="flex lg:flex-row justify-center lg:justify-start mt-6 mb-2 lg:space-y-0 lg:space-x-4">
+              <button className="flex items-center rounded-2xl w-40 lg:w-52 font-heading h-12 bg-cart text-white font-bold p-2 lg:p-4">
                 Add to Cart
                 <IoCartOutline className="text-xl rounded-md bg-yellow-400 ml-2" />
               </button>
-              <button className="flex items-center justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 font-extrabold">
+              <button className="flex items-center ml-2 justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 font-extrabold">
                 <IoEyeSharp className="text-2xl lg:text-3xl" />
               </button>
             </div>

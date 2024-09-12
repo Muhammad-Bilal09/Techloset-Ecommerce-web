@@ -5,7 +5,7 @@ export default function Review() {
   return (
     <div className="mx-8 mt-7 lg:ml-[61px] lg:mr-[60px] lg:mt-[75px] bg-gray-50">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {reviews.map((review) => (
             <div
               key={review.id}
