@@ -59,7 +59,7 @@ export default function PopularProduct() {
           {filteredData?.map((item: ItemType) => (
             <div
               key={item.id}
-              className="relative lg:w-[308px] mb-4 lg:h-[313px] shadow-md rounded-[19.67px] border-5 overflow-hidden group"
+              className="relative lg:w-[100%] mb-4 lg:h-[313px] shadow-md rounded-[19.67px] border-5 overflow-hidden group"
             >
               <div className="relative flex justify-center items-center mb-4">
                 <img
