@@ -105,19 +105,19 @@ export default function PopularProduct() {
               </div>
 
               <div className="absolute inset-0 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 top-48">
-                <div className="flex flex-col lg:flex-row items-center lg:items-start space-y-2 lg:space-y-0 lg:space-x-4">
+                <div className="flex  lg:flex-row items-center lg:justify-center space-y-2 lg lg:space-y-0 lg:space-x-4">
                   <button
                     onClick={() => {
                       handleAddToCart(item);
                       notify();
                     }}
-                    className="flex items-center rounded-2xl w-full lg:w-44 font-heading h-12 bg-cart font-bold p-2 lg:p-4"
+                    className="flex items-center rounded-2xl w-full lg:w-44 font-heading h-12 bg-cart font-bold p-2 lg:p-4 lg:ml-2"
                   >
                     Add to Cart
                     <IoCartOutline className="text-xl bg-yellow-400 ml-2 rounded" />
                   </button>
                   <Link to={`/detail/${item.id}`}>
-                    <button className="flex items-center justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 font-extrabold">
+                    <button className="flex items-center justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 p-2 font-extrabold sm:mx-2 sm:mb-1">
                       <IoEyeSharp className="text-2xl lg:text-3xl" />
                     </button>
                   </Link>

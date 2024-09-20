@@ -26,7 +26,7 @@ export default function Header() {
       <nav className="mb-7">
         <div className="max-w-7xl  mt-5  lg:ml-[61px] lg:mr-[49px] mx-auto lg:flex justify-between items-center">
           <div className="flex justify-center items-center">
-            <Link to="#" className="text-black w-[273px] h-[21px] font-heading mx-[51px]">
+            <Link to="#" className="text-black w-[290px] h-[21px] font-heading mx-[51px]">
               Need help? Call us (+98) 0234 456 789
             </Link>
           </div>
