@@ -117,7 +117,7 @@ export default function PopularProduct() {
                     <IoCartOutline className="text-xl bg-yellow-400 ml-2 rounded" />
                   </button>
                   <Link to={`/detail/${item.id}`}>
-                    <button className="flex items-center justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 p-2 font-extrabold sm:mx-2 sm:mb-1">
+                    <button className="flex items-center justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 p-2 font-extrabold mx-2 mb-1">
                       <IoEyeSharp className="text-2xl lg:text-3xl" />
                     </button>
                   </Link>
