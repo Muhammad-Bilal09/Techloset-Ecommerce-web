@@ -32,8 +32,9 @@ const Product: React.FC = () => {
 
   return (
     <>
-      <div className="container mx-auto lg:ml-[61px] lg:mr-[64px]">
-        <div className="flex flex-col md:flex-row lg:flex-row gap-5 lg:mt-[103px]">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row lg:flex-row gap-5 mt-5 lg:mt-[103px]">
+          {/* Sidebar */}
           <aside className="w-full lg:w-1/4 bg-gray-100 p-4 rounded-lg shadow-md">
             <div className="mb-6">
               <div className="flex justify-between items-center">
@@ -58,12 +59,13 @@ const Product: React.FC = () => {
               ))}
             </div>
             <hr className="my-6" />
+            {/* Additional Filters */}
             <div className="mb-6">
-               <h2 className="text-blue-400 font-medium text-lg font-heading mb-2">
-                 Availability
-               </h2>
-               <div className="flex items-center justify-between py-2">
-                 <span className="text-gray-700 font-heading">In stock</span>
+              <h2 className="text-blue-400 font-medium text-lg font-heading mb-2">
+                Availability
+              </h2>
+              <div className="flex items-center justify-between py-2">
+                <span className="text-gray-700 font-heading">In stock</span>
                 <input
                   type="checkbox"
                   className="form-checkbox h-5 w-5 text-green-500"
@@ -78,6 +80,7 @@ const Product: React.FC = () => {
               </div>
             </div>
             <hr className="my-6" />
+            {/* Product Type */}
             <div className="mb-6">
               <h2 className="text-blue-400 font-medium text-lg mb-2 font-heading">
                 Product Type
@@ -91,6 +94,7 @@ const Product: React.FC = () => {
               </div>
             </div>
             <hr className="my-6" />
+            {/* Brand */}
             <div className="mb-6">
               <h2 className="text-blue-400 font-medium text-lg font-heading mb-2">
                 Brand
@@ -104,6 +108,7 @@ const Product: React.FC = () => {
               </div>
             </div>
             <hr className="my-6" />
+            {/* Color */}
             <div className="mb-6">
               <h2 className="text-blue-400 font-medium text-lg mb-2">Color</h2>
               <div className="flex flex-wrap gap-2">
@@ -116,7 +121,7 @@ const Product: React.FC = () => {
                   "amber-300",
                   "teal-400",
                   "green-400",
-                ].map((color) => (
+                ]?.map((color) => (
                   <span
                     key={color}
                     className={`p-2 rounded-full bg-${color}`}
@@ -125,9 +130,10 @@ const Product: React.FC = () => {
               </div>
             </div>
             <hr className="my-6" />
+            {/* Size */}
             <div>
               <h2 className="text-blue-400 font-medium text-lg mb-2">Size</h2>
-              {["M", "S", "X", "XX"].map((size) => (
+              {["M", "S", "X", "XX"]?.map((size) => (
                 <div
                   key={size}
                   className="flex items-center justify-between py-2"
@@ -142,18 +148,19 @@ const Product: React.FC = () => {
             </div>
           </aside>
 
+          {/* Main Product Section */}
           <main className="w-full lg:w-3/4">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[26px]">
-              {filteredData?.slice(0, 12).map((item: ItemType) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredData?.slice(0, 12)?.map((item: ItemType) => (
                 <div
-                  key={item.id}
+                  key={item?.id}
                   className="relative overflow-hidden shadow-md rounded-2xl border-2 bg-white flex flex-col p-4 group"
                 >
                   <div className="flex justify-center mb-4">
                     <img
-                      className="w-[187px] h-[173px]"
-                      src={item.image}
-                      alt={item.title}
+                      className="w-[150px] sm:w-[187px] h-[150px] sm:h-[173px] object-cover"
+                      src={item?.image}
+                      alt={item?.title}
                     />
                     <button
                       onClick={() => {
@@ -162,7 +169,7 @@ const Product: React.FC = () => {
                       className="absolute top-2 right-2 rounded-full bg-gray-200 p-2 border-0 inline-flex items-center justify-center text-gray-500"
                     >
                       <svg
-                        fill={itemHeartColors[item.id] || "currentColor"}
+                        fill={itemHeartColors[item?.id] || "currentColor"}
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
@@ -174,16 +181,16 @@ const Product: React.FC = () => {
                     </button>
                   </div>
                   <div className="transition-transform transform group-hover:scale-105 group-hover:opacity-0 duration-300">
-                    <p className="text-blog font-bold mt-4">
-                      {item.title.slice(0, 20)}
+                    <p className="text-blog font-bold mt-4 text-sm sm:text-base">
+                      {item?.title?.slice(0, 20)}
                     </p>
-                    <p className="font-bold text-product lg:my-[15px]">
-                      ${item.price}
+                    <p className="font-bold text-product text-sm sm:text-lg mt-2">
+                      ${item?.price}
                     </p>
                     <div className="flex mt-2">
-                      {[...Array(5)].map((_, index) => (
+                      {[...Array(5)]?.map((_, index) => (
                         <i key={index}>
-                          {index < item.rating ? (
+                          {index < item?.rating ? (
                             <FaStar className="text-star" />
                           ) : (
                             <CiStar className="text-star" />
@@ -205,7 +212,7 @@ const Product: React.FC = () => {
                         Add to Cart
                         <IoCartOutline className="text-xl bg-yellow-400 ml-2 rounded" />
                       </button>
-                      <Link to={`/detail/${item.id}`}>
+                      <Link to={`/detail/${item?.id}`}>
                         <button className="flex items-center justify-center bg-blue-200 rounded-2xl w-12 h-12 lg:w-16 lg:h-12 font-extrabold">
                           <IoEyeSharp className="text-2xl lg:text-3xl" />
                         </button>

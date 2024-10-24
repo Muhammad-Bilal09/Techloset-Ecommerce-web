@@ -22,7 +22,7 @@ export default function PopularProduct() {
   };
 
   const handleShowAll = () => {
-    setSelectedCategory(categories) 
+    setSelectedCategory(categories);
   };
 
   return (
@@ -55,17 +55,17 @@ export default function PopularProduct() {
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-4 gap-2 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 mt-8 place-self-center">
+        <div className="grid lg:grid-cols-4 gap-2 md:grid-cols-2 lg:ml-[64px] lg:mr-[61px] mx-10 mt-8">
           {filteredData?.map((item: ItemType) => (
             <div
-              key={item.id}
+              key={item?.id}
               className="relative lg:w-[100%] mb-4 lg:h-[313px] shadow-md rounded-[19.67px] border-5 overflow-hidden group"
             >
               <div className="relative flex justify-center items-center mb-4">
                 <img
                   className="w-[187px] h-[173px]"
-                  src={item.image}
-                  alt={item.title}
+                  src={item?.image}
+                  alt={item?.title}
                 />
 
                 <button
@@ -75,7 +75,7 @@ export default function PopularProduct() {
                   className="absolute top-2 right-2 rounded-full bg-gray-200 p-2 border-0 inline-flex items-center justify-center text-gray-500"
                 >
                   <svg
-                    fill={itemHeartColors[item.id] || "currentColor"}
+                    fill={itemHeartColors[item?.id] || "currentColor"}
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -88,13 +88,13 @@ export default function PopularProduct() {
               </div>
               <div className="transition-transform ml-3 transform group-hover:scale-105 group-hover:opacity-0 duration-300">
                 <p className="text-blog font-bold mt-4">
-                  {item.title.slice(0, 20)}
+                  {item?.title?.slice(0, 20)}
                 </p>
                 <p className="font-bold text-star my-4">${item.price}</p>
                 <div className="flex mt-2">
-                  {[...Array(5)].map((_, index) => (
+                  {[...Array(5)]?.map((_, index) => (
                     <i key={index}>
-                      {index < item.rating ? (
+                      {index < item?.rating ? (
                         <FaStar className="text-star" />
                       ) : (
                         <CiStar className="text-star" />
@@ -116,7 +116,7 @@ export default function PopularProduct() {
                     Add to Cart
                     <IoCartOutline className="text-xl bg-yellow-400 ml-2 rounded" />
                   </button>
-                  <Link to={`/detail/${item.id}`}>
+                  <Link to={`/detail/${item?.id}`}>
                     <button className="flex items-center justify-center bg-cart rounded-2xl w-12 h-12 lg:w-16 lg:h-12 p-2 font-extrabold mx-2 mb-1">
                       <IoEyeSharp className="text-2xl lg:text-3xl" />
                     </button>

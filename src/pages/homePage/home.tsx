@@ -7,6 +7,7 @@ import SponserOne from "../../components/homeComponent/sponserOne";
 import Review from "../../components/homeComponent/review";
 import SponserTwo from "../../components/homeComponent/sponserTwo";
 import Blog from "../../components/homeComponent/blog";
+import { useState } from "react";
 
 export default function Home() {
   return (
